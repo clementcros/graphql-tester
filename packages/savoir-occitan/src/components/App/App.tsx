@@ -9,9 +9,11 @@ import ProductCard from "../ProductCard";
 const styles = (theme: any) =>
     createStyles({
         root: {
-            margin: "50px",
-            marginLeft: "200px",
-            marginRight: "200px",
+            marginTop: "50px",
+            marginBottom: "100px",
+            marginLeft: "10%",
+            marginRight: "10%",
+            padding: 10,
             verticalAlign: "middle",
             borderRadius: 13,
             background: theme.palette.primary[100]

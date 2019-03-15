@@ -21,7 +21,7 @@ interface IFooterProps {
 }
 
 /**
- * Footer of context form.
+ * Footer.
  */
 const Footer = (props: IFooterProps) => {
     const { classes } = props;
