@@ -16,7 +16,9 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
 import red from "@material-ui/core/colors/red";
 
-const styles = (theme: any) => ({
+import { IProduct } from "common";
+
+const styles = () => ({
     card: {
         maxWidth: 400,
         margin: "1%"
@@ -33,15 +35,18 @@ const styles = (theme: any) => ({
     }
 });
 
-interface IProductCardProps {
+interface IProductCardProps extends IProduct {
     classes: any;
+    title: string;
+    price: number;
+    description: string;
 }
 
 /**
  * Compo desc.
  */
 const ProductCard = (props: IProductCardProps) => {
-    const { classes } = props;
+    const { classes, title, price, description } = props;
     return (
         <Card className={classes.card}>
             <CardHeader
@@ -55,20 +60,16 @@ const ProductCard = (props: IProductCardProps) => {
                         <MoreVertIcon />
                     </IconButton>
                 }
-                title="Shrimp and Chorizo Paella"
-                subheader={`13,98 euros`}
+                title={title}
+                subheader={`${price} euros`}
             />
             <CardMedia
                 className={classes.media}
-                image={require("src/__data__/images/paella.jpg")}
+                image={require("../../__data__/images/paella.jpg")}
                 title="Paella dish"
             />
             <CardContent>
-                <Typography component="p">
-                    This impressive paella is a perfect party dish and a fun
-                    meal to cook together with your guests. Add 1 cup of frozen
-                    peas along with the mussels, if you like.
-                </Typography>
+                <Typography component="p">{description}</Typography>
             </CardContent>
             <CardActions className={classes.actions} disableActionSpacing>
                 <IconButton aria-label="Add to favorites">

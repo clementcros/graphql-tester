@@ -1,0 +1,11 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "main": "dist/index.js",
+    "devDependencies": {
+        "@types/node": "^11.11.3",
+        "concurrently": "^4.1.0",
+        "nodemon": "^1.18.10",
+        "typescript": "^3.3.3333"
+    }
+}
