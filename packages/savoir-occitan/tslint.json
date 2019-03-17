@@ -1,7 +1,7 @@
 {
     "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
     "linterOptions": {
-        "exclude": ["config/**/*.js", "node_modules/**/*.ts"]
+        "exclude": ["node_modules/**/*.ts"]
     },
     "rules": {
         "no-console": false,
@@ -10,11 +10,8 @@
         "jsx-boolean-value": false,
         "jsx-no-lambda": false,
         "member-access": false,
-        // interface begin with "I"
         "interface-name": false,
-        // class in pascal case
         "class-name": false,
-        // "no-var-requires": false
         "no-conditional-assignment": false,
         "no-string-literal": false,
         "no-eval": false
